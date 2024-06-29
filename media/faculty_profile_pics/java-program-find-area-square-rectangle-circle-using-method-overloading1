@@ -1,0 +1,1178 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<meta charset="UTF-8">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link media="all" href="https://www.sanfoundry.com/wp-content/cache/autoptimize/css/autoptimize_f4cdf5a5df487e6c7c551eca3806d198.css" rel="stylesheet" /><title>Java Program to Find Area of Square, Rectangle and Circle using Method Overloading - Sanfoundry</title>
+
+
+<!-- This site is optimized with the Yoast SEO plugin v11.6 - https://yoast.com/wordpress/plugins/seo/ -->
+<link rel="canonical" href="https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Java Program to Find Area of Square, Rectangle and Circle using Method Overloading - Sanfoundry" />
+<meta property="og:description" content="This is a Java Program to Find Area of Square, Rectangle and Circle using Method Overloading. We declare three methods of same name but with different number of arguments or with different data types. Now when we call these methods using objects, corresponding methods will be called as per the number of arguments or their ... Read more" />
+<meta property="og:url" content="https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/" />
+<meta property="og:site_name" content="Sanfoundry" />
+<meta property="article:section" content="Java Programs" />
+<meta property="article:published_time" content="2014-12-19T01:18:08+00:00" />
+<meta property="article:modified_time" content="2022-05-24T06:51:36+00:00" />
+<meta property="og:updated_time" content="2022-05-24T06:51:36+00:00" />
+<meta property="og:image" content="https://www.sanfoundry.com/wp-content/uploads/2014/08/Java-Programming-1000-Programs.png" />
+<meta property="og:image:secure_url" content="https://www.sanfoundry.com/wp-content/uploads/2014/08/Java-Programming-1000-Programs.png" />
+<meta property="og:image:width" content="203" />
+<meta property="og:image:height" content="203" />
+<script type='application/ld+json' class='yoast-schema-graph yoast-schema-graph--main'>{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://www.sanfoundry.com/#organization","name":"Sanfoundry","url":"https://www.sanfoundry.com/","sameAs":[],"logo":{"@type":"ImageObject","@id":"https://www.sanfoundry.com/#logo","url":"https://www.sanfoundry.com/wp-content/uploads/2021/02/sanfoundry-logo.png","width":500,"height":500,"caption":"Sanfoundry"},"image":{"@id":"https://www.sanfoundry.com/#logo"}},{"@type":"WebSite","@id":"https://www.sanfoundry.com/#website","url":"https://www.sanfoundry.com/","name":"Sanfoundry","publisher":{"@id":"https://www.sanfoundry.com/#organization"},"potentialAction":{"@type":"SearchAction","target":"https://www.sanfoundry.com/search/?q={search_term_string}","query-input":"required name=search_term_string"}},{"@type":"ImageObject","@id":"https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/#primaryimage","url":"https://www.sanfoundry.com/wp-content/uploads/2014/08/Java-Programming-1000-Programs.png","width":203,"height":203,"caption":"1000 Programs in Java"},{"@type":"WebPage","@id":"https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/#webpage","url":"https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/","inLanguage":"en-US","name":"Java Program to Find Area of Square, Rectangle and Circle using Method Overloading - Sanfoundry","isPartOf":{"@id":"https://www.sanfoundry.com/#website"},"primaryImageOfPage":{"@id":"https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/#primaryimage"},"datePublished":"2014-12-19T01:18:08+00:00","dateModified":"2022-05-24T06:51:36+00:00"},{"@type":"Article","@id":"https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/#article","isPartOf":{"@id":"https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/#webpage"},"author":{"@id":"https://www.sanfoundry.com/#/schema/person/16760a2506adcd62b3d960aa1f890327"},"headline":"Java  Program to Find Area of Square, Rectangle and Circle using Method Overloading","datePublished":"2014-12-19T01:18:08+00:00","dateModified":"2022-05-24T06:51:36+00:00","commentCount":0,"mainEntityOfPage":{"@id":"https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/#webpage"},"publisher":{"@id":"https://www.sanfoundry.com/#organization"},"image":{"@id":"https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/#primaryimage"},"articleSection":"Java Programs,Java Programs - Language"},{"@type":["Person"],"@id":"https://www.sanfoundry.com/#/schema/person/16760a2506adcd62b3d960aa1f890327","name":"javaguy","sameAs":[]}]}</script>
+<!-- / Yoast SEO plugin. -->
+
+<link rel='dns-prefetch' href='//fonts.googleapis.com' />
+<link href='https://fonts.gstatic.com' crossorigin rel='preconnect' />
+<link rel='stylesheet' id='generate-fonts-css'  href='//fonts.googleapis.com/css?family=Open+Sans:300,300italic,regular,italic,600,600italic,700,700italic,800,800italic&#038;display=swap' type='text/css' media='all' />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- MailerLite Universal -->
+    <script>
+        (function (m, a, i, l, e, r) {
+            m['MailerLiteObject'] = e;
+
+            function f() {
+                var c = {a: arguments, q: []};
+                var r = this.push(c);
+                return "number" != typeof r ? r : f.bind(c.q);
+            }
+
+            f.q = f.q || [];
+            m[e] = m[e] || f.bind(f.q);
+            m[e].q = m[e].q || f.q;
+            r = a.createElement(i);
+            var _ = a.getElementsByTagName(i)[0];
+            r.async = 1;
+            r.src = l + '?' + (~~(new Date().getTime() / 10000000));
+            _.parentNode.insertBefore(r, _);
+        })(window, document, 'script', 'https://static.mailerlite.com/js/universal.js', 'ml');
+
+        var ml_account = ml('accounts', '381541', 'z7o9v6x3r7', 'load');
+    </script>
+    <!-- End MailerLite Universal -->
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-1422055270305537" crossorigin="anonymous"></script>
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-R71X9QWZWJ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-R71X9QWZWJ');
+</script>
+<script data-cfasync="false" type="text/javascript">(function(w, d) { var s = d.createElement('script'); s.src = '//cdn.adpushup.com/41319/adpushup.js'; s.type = 'text/javascript'; s.async = true; (d.getElementsByTagName('head')[0] || d.getElementsByTagName('body')[0]).appendChild(s); })(window, document);</script>
+    <script>(function(a,b,c,d,e){e=a.createElement(b);a=a.getElementsByTagName(b)[0];e.async=1;e.src=c;a.parentNode.insertBefore(e,a)})(document,'script','//hammerhearing.com/2a610c8ea226821d0a90e9c74b32d34c46d16031c8e6e697f6d45ad856f8a0aadbb5cde0d54ea15ba7f15f4f720c05508b37d46a267fc4346b8e95e73585');</script>
+    <meta name="viewport" content="width=device-width, initial-scale=1"></head>
+
+<body class="post-template-default single single-post postid-82191 single-format-standard wp-custom-logo wp-embed-responsive post-image-above-header post-image-aligned-center slideout-enabled slideout-mobile sticky-menu-no-transition sticky-enabled mobile-sticky-menu mobile-header mobile-header-logo mobile-header-sticky both-sidebars nav-below-header fluid-header separate-containers active-footer-widgets-1 nav-aligned-left header-aligned-left dropdown-hover featured-image-active" itemtype="https://schema.org/Blog" itemscope>
+	<a class="screen-reader-text skip-link" href="#content" title="Skip to content">Skip to content</a>		<nav id="mobile-header" data-auto-hide-sticky="true" class="main-navigation mobile-header-navigation has-branding has-sticky-branding" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+			<div class="inside-navigation grid-container grid-parent">
+				<div class="site-logo mobile-header-logo">
+					<a href="https://www.sanfoundry.com/" title="Sanfoundry" rel="home">
+						<noscript><img src="https://www.sanfoundry.com/wp-content/uploads/2021/02/sanfoundry-logo-horizontal-e1624159053156.png" alt="Sanfoundry" /></noscript><img class="lazyload" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20%20%22%3E%3C/svg%3E' data-src="https://www.sanfoundry.com/wp-content/uploads/2021/02/sanfoundry-logo-horizontal-e1624159053156.png" alt="Sanfoundry" />
+					</a>
+				</div>					<button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">
+						<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+					</svg><svg viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+					</svg></span><span class="screen-reader-text">Menu</span>					</button>
+					<div id="mobile-menu" class="main-nav"><ul id="menu-offcanvasmobile" class=" menu sf-menu"><li id="menu-item-269885" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-269885"><a href="#">Branchwise MCQs<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-272820" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-272820"><a href="#">CS &#8211; IT &#8211; IS<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-269898" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269898"><a href="https://www.sanfoundry.com/programming-questions-answers/">Programming</a></li>
+		<li id="menu-item-269883" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269883"><a href="https://www.sanfoundry.com/computer-science-questions-answers/">CS</a></li>
+		<li id="menu-item-269887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269887"><a href="https://www.sanfoundry.com/information-technology-questions-answers/">IT</a></li>
+		<li id="menu-item-269888" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269888"><a href="https://www.sanfoundry.com/information-science-questions-answers/">IS</a></li>
+	</ul>
+</li>
+	<li id="menu-item-272821" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-272821"><a href="#">ECE &#8211; EEE &#8211; EE<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-269903" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269903"><a href="https://www.sanfoundry.com/electronics-communication-engineering-questions-answers/">ECE</a></li>
+		<li id="menu-item-269904" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269904"><a href="https://www.sanfoundry.com/electrical-electronics-engineering-questions-answers/">EEE</a></li>
+		<li id="menu-item-269905" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269905"><a href="https://www.sanfoundry.com/electrical-engineering-questions-answers/">EE</a></li>
+	</ul>
+</li>
+	<li id="menu-item-269906" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269906"><a href="https://www.sanfoundry.com/civil-engineering-questions-answers/">Civil</a></li>
+	<li id="menu-item-269907" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269907"><a href="https://www.sanfoundry.com/mechanical-engineering-questions-answers/">Mechanical</a></li>
+	<li id="menu-item-269913" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269913"><a href="https://www.sanfoundry.com/chemical-engineering-questions-answers/">Chemical</a></li>
+	<li id="menu-item-269914" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269914"><a href="https://www.sanfoundry.com/metallurgical-engineering-questions-answers/">Metallurgy</a></li>
+	<li id="menu-item-290523" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-290523"><a href="https://www.sanfoundry.com/mining-engineering-questions-answers/">Mining</a></li>
+	<li id="menu-item-269915" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269915"><a href="https://www.sanfoundry.com/instrumentation-engineering-questions-answers/">Instrumentation</a></li>
+	<li id="menu-item-269916" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269916"><a href="https://www.sanfoundry.com/aerospace-engineering-questions-answers/">Aerospace</a></li>
+	<li id="menu-item-269917" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269917"><a href="https://www.sanfoundry.com/aeronautical-engineering-questions-answers/">Aeronautical</a></li>
+	<li id="menu-item-269918" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269918"><a href="https://www.sanfoundry.com/biotechnology-questions-answers/">Biotechnology</a></li>
+	<li id="menu-item-269919" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269919"><a href="https://www.sanfoundry.com/agricultural-engineering-questions-answers/">Agriculture</a></li>
+	<li id="menu-item-269920" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269920"><a href="https://www.sanfoundry.com/marine-engineering-questions-answers/">Marine</a></li>
+	<li id="menu-item-327387" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327387"><a href="https://www.sanfoundry.com/mechatronics-engineering-questions-answers/">Mechatronics</a></li>
+	<li id="menu-item-269921" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269921"><a href="https://www.sanfoundry.com/master-computer-applications-questions-answers/">MCA</a></li>
+	<li id="menu-item-269922" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269922"><a href="https://www.sanfoundry.com/bachelor-computer-applications-questions-answers/">BCA</a></li>
+</ul>
+</li>
+<li id="menu-item-313196" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313196"><a href="#">School MCQs<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-327390" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-327390"><a href="#">Class 8<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-327397" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327397"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-8/">Mathematics – 8</a></li>
+	</ul>
+</li>
+	<li id="menu-item-327392" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-327392"><a href="#">Class 9<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-327396" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327396"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-9/">Mathematics – 9</a></li>
+	</ul>
+</li>
+	<li id="menu-item-327393" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-327393"><a href="#">Class 10<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-327395" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327395"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-10/">Mathematics – 10</a></li>
+	</ul>
+</li>
+	<li id="menu-item-313205" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313205"><a href="#">Class 11<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-313199" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313199"><a href="https://www.sanfoundry.com/1000-physics-questions-answers-class-11/">Physics &#8211; 11</a></li>
+		<li id="menu-item-313203" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313203"><a href="https://www.sanfoundry.com/1000-chemistry-questions-answers-class-11/">Chemistry &#8211; 11</a></li>
+		<li id="menu-item-313201" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313201"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-11/">Mathematics &#8211; 11</a></li>
+		<li id="menu-item-313198" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313198"><a href="https://www.sanfoundry.com/1000-biology-questions-answers-class-11/">Biology &#8211; 11</a></li>
+	</ul>
+</li>
+	<li id="menu-item-313206" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313206"><a href="#">Class 12<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li id="menu-item-313204" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313204"><a href="https://www.sanfoundry.com/1000-physics-questions-answers-class-12/">Physics &#8211; 12</a></li>
+		<li id="menu-item-313202" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313202"><a href="https://www.sanfoundry.com/1000-chemistry-questions-answers-class-12/">Chemistry &#8211; 12</a></li>
+		<li id="menu-item-313200" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313200"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-12/">Mathematics &#8211; 12</a></li>
+		<li id="menu-item-313197" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313197"><a href="https://www.sanfoundry.com/1000-biology-questions-answers-class-12/">Biology &#8211; 12</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li id="menu-item-394018" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-394018"><a href="#">DSA<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-394024" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394024"><a href="https://www.sanfoundry.com/c-programming-examples/">C Programs</a></li>
+	<li id="menu-item-394023" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394023"><a href="https://www.sanfoundry.com/1000-c-algorithms-problems-programming-examples/">Algorithms in C</a></li>
+	<li id="menu-item-394019" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394019"><a href="https://www.sanfoundry.com/c-programming-examples-data-structures/">Data Structures in C</a></li>
+	<li id="menu-item-394026" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394026"><a href="https://www.sanfoundry.com/cpp-programs/">C++ Programs</a></li>
+	<li id="menu-item-394022" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394022"><a href="https://www.sanfoundry.com/1000-cpp-algorithms-problems-programming-examples/">C++ Algorithms</a></li>
+	<li id="menu-item-394020" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394020"><a href="https://www.sanfoundry.com/cpp-programming-examples-data-structures/">Data Structures in C++</a></li>
+	<li id="menu-item-394028" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394028"><a href="https://www.sanfoundry.com/java-programming-examples/">Java Programs</a></li>
+	<li id="menu-item-394027" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394027"><a href="https://www.sanfoundry.com/1000-java-algorithms-problems-programming-examples/">Java Algorithms</a></li>
+	<li id="menu-item-394021" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394021"><a href="https://www.sanfoundry.com/java-programming-examples-data-structures/">Data Structures in Java</a></li>
+	<li id="menu-item-394029" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394029"><a href="https://www.sanfoundry.com/python-problems-solutions/">Python Programs</a></li>
+	<li id="menu-item-394025" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394025"><a href="https://www.sanfoundry.com/csharp-programming-examples/">C# Programs</a></li>
+</ul>
+</li>
+<li id="menu-item-313267" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313267"><a href="#">Test<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-272830" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-272830"><a href="https://test.sanfoundry.com/">All-Tests</a></li>
+	<li id="menu-item-394033" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394033"><a href="https://www.sanfoundry.com/certification/">Certification</a></li>
+	<li id="menu-item-313210" class="menu-item menu-item-type-post_type menu-item-object-post menu-item-313210"><a href="https://www.sanfoundry.com/contests-results/">Download Certificates</a></li>
+</ul>
+</li>
+<li id="menu-item-398563" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-398563"><a href="#">Job<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-398559" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398559"><a href="https://www.sanfoundry.com/jobs/">All Jobs</a></li>
+	<li id="menu-item-398560" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-398560"><a href="https://test.sanfoundry.com/job-tests/">Job Tests</a></li>
+</ul>
+</li>
+<li id="menu-item-398562" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-398562"><a href="#">Internship<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-398561" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-398561"><a href="https://www.sanfoundry.com/internship/">All Internships</a></li>
+	<li id="menu-item-269900" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-269900"><a href="https://test.sanfoundry.com/internship-tests/">Internship Tests</a></li>
+</ul>
+</li>
+<li id="menu-item-269882" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-269882"><a href="https://www.sanfoundry.com/training/">Training</a></li>
+<li id="menu-item-362508" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-362508"><a href="#">Videos<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li id="menu-item-362507" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362507"><a href="https://www.sanfoundry.com/advanced-c-programming-video/">Advanced C Programming</a></li>
+	<li id="menu-item-363108" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363108"><a href="https://www.sanfoundry.com/c-interview-questions-video/">C Interview Questions</a></li>
+	<li id="menu-item-382789" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382789"><a href="https://www.sanfoundry.com/training/">Training Videos</a></li>
+</ul>
+</li>
+<li id="menu-item-382788" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382788"><a href="https://www.sanfoundry.com/best-reference-books/">Books</a></li>
+<li id="menu-item-394017" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394017"><a href="https://www.sanfoundry.com/contact/">Contact</a></li>
+</ul></div>			</div><!-- .inside-navigation -->
+		</nav><!-- #site-navigation -->
+				<nav id="site-navigation" class="auto-hide-sticky has-branding main-navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope>
+			<div class="inside-navigation grid-container grid-parent">
+				<div class="navigation-branding"><div class="site-logo">
+					<a href="https://www.sanfoundry.com/" title="Sanfoundry" rel="home">
+						<noscript><img  class="header-image" alt="Sanfoundry" src="https://www.sanfoundry.com/wp-content/uploads/2021/02/sanfoundry-logo-horizontal-e1624159053156.png" title="Sanfoundry" srcset="https://www.sanfoundry.com/wp-content/uploads/2021/02/sanfoundry-logo-horizontal-e1624159053156.png 1x, https://www.sanfoundry.com/wp-content/uploads/2021/02/sanfoundry-logo-horizontal-e1624159053156.png 2x" width="369" height="77" /></noscript><img  class="lazyload header-image" alt="Sanfoundry" src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20369%2077%22%3E%3C/svg%3E' data-src="https://www.sanfoundry.com/wp-content/uploads/2021/02/sanfoundry-logo-horizontal-e1624159053156.png" title="Sanfoundry" data-srcset="https://www.sanfoundry.com/wp-content/uploads/2021/02/sanfoundry-logo-horizontal-e1624159053156.png 1x, https://www.sanfoundry.com/wp-content/uploads/2021/02/sanfoundry-logo-horizontal-e1624159053156.png 2x" width="369" height="77" />
+					</a>
+				</div></div>				<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+					<span class="gp-icon icon-menu-bars"><svg viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M0 96c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24zm0 160c0-13.255 10.745-24 24-24h464c13.255 0 24 10.745 24 24s-10.745 24-24 24H24c-13.255 0-24-10.745-24-24z" />
+					</svg><svg viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+					</svg></span><span class="screen-reader-text">Menu</span>				</button>
+				<div id="primary-menu" class="main-nav"><ul id="menu-offcanvasmobile-1" class=" menu sf-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-269885"><a href="#">Branchwise MCQs<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-272820"><a href="#">CS &#8211; IT &#8211; IS<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269898"><a href="https://www.sanfoundry.com/programming-questions-answers/">Programming</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269883"><a href="https://www.sanfoundry.com/computer-science-questions-answers/">CS</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269887"><a href="https://www.sanfoundry.com/information-technology-questions-answers/">IT</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269888"><a href="https://www.sanfoundry.com/information-science-questions-answers/">IS</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-272821"><a href="#">ECE &#8211; EEE &#8211; EE<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269903"><a href="https://www.sanfoundry.com/electronics-communication-engineering-questions-answers/">ECE</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269904"><a href="https://www.sanfoundry.com/electrical-electronics-engineering-questions-answers/">EEE</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269905"><a href="https://www.sanfoundry.com/electrical-engineering-questions-answers/">EE</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269906"><a href="https://www.sanfoundry.com/civil-engineering-questions-answers/">Civil</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269907"><a href="https://www.sanfoundry.com/mechanical-engineering-questions-answers/">Mechanical</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269913"><a href="https://www.sanfoundry.com/chemical-engineering-questions-answers/">Chemical</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269914"><a href="https://www.sanfoundry.com/metallurgical-engineering-questions-answers/">Metallurgy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-290523"><a href="https://www.sanfoundry.com/mining-engineering-questions-answers/">Mining</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269915"><a href="https://www.sanfoundry.com/instrumentation-engineering-questions-answers/">Instrumentation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269916"><a href="https://www.sanfoundry.com/aerospace-engineering-questions-answers/">Aerospace</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269917"><a href="https://www.sanfoundry.com/aeronautical-engineering-questions-answers/">Aeronautical</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269918"><a href="https://www.sanfoundry.com/biotechnology-questions-answers/">Biotechnology</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269919"><a href="https://www.sanfoundry.com/agricultural-engineering-questions-answers/">Agriculture</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269920"><a href="https://www.sanfoundry.com/marine-engineering-questions-answers/">Marine</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327387"><a href="https://www.sanfoundry.com/mechatronics-engineering-questions-answers/">Mechatronics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269921"><a href="https://www.sanfoundry.com/master-computer-applications-questions-answers/">MCA</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269922"><a href="https://www.sanfoundry.com/bachelor-computer-applications-questions-answers/">BCA</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313196"><a href="#">School MCQs<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-327390"><a href="#">Class 8<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327397"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-8/">Mathematics – 8</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-327392"><a href="#">Class 9<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327396"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-9/">Mathematics – 9</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-327393"><a href="#">Class 10<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327395"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-10/">Mathematics – 10</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313205"><a href="#">Class 11<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313199"><a href="https://www.sanfoundry.com/1000-physics-questions-answers-class-11/">Physics &#8211; 11</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313203"><a href="https://www.sanfoundry.com/1000-chemistry-questions-answers-class-11/">Chemistry &#8211; 11</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313201"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-11/">Mathematics &#8211; 11</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313198"><a href="https://www.sanfoundry.com/1000-biology-questions-answers-class-11/">Biology &#8211; 11</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313206"><a href="#">Class 12<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313204"><a href="https://www.sanfoundry.com/1000-physics-questions-answers-class-12/">Physics &#8211; 12</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313202"><a href="https://www.sanfoundry.com/1000-chemistry-questions-answers-class-12/">Chemistry &#8211; 12</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313200"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-12/">Mathematics &#8211; 12</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313197"><a href="https://www.sanfoundry.com/1000-biology-questions-answers-class-12/">Biology &#8211; 12</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-394018"><a href="#">DSA<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394024"><a href="https://www.sanfoundry.com/c-programming-examples/">C Programs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394023"><a href="https://www.sanfoundry.com/1000-c-algorithms-problems-programming-examples/">Algorithms in C</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394019"><a href="https://www.sanfoundry.com/c-programming-examples-data-structures/">Data Structures in C</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394026"><a href="https://www.sanfoundry.com/cpp-programs/">C++ Programs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394022"><a href="https://www.sanfoundry.com/1000-cpp-algorithms-problems-programming-examples/">C++ Algorithms</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394020"><a href="https://www.sanfoundry.com/cpp-programming-examples-data-structures/">Data Structures in C++</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394028"><a href="https://www.sanfoundry.com/java-programming-examples/">Java Programs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394027"><a href="https://www.sanfoundry.com/1000-java-algorithms-problems-programming-examples/">Java Algorithms</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394021"><a href="https://www.sanfoundry.com/java-programming-examples-data-structures/">Data Structures in Java</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394029"><a href="https://www.sanfoundry.com/python-problems-solutions/">Python Programs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394025"><a href="https://www.sanfoundry.com/csharp-programming-examples/">C# Programs</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313267"><a href="#">Test<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-272830"><a href="https://test.sanfoundry.com/">All-Tests</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394033"><a href="https://www.sanfoundry.com/certification/">Certification</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-313210"><a href="https://www.sanfoundry.com/contests-results/">Download Certificates</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-398563"><a href="#">Job<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398559"><a href="https://www.sanfoundry.com/jobs/">All Jobs</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-398560"><a href="https://test.sanfoundry.com/job-tests/">Job Tests</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-398562"><a href="#">Internship<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-398561"><a href="https://www.sanfoundry.com/internship/">All Internships</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-269900"><a href="https://test.sanfoundry.com/internship-tests/">Internship Tests</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-269882"><a href="https://www.sanfoundry.com/training/">Training</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-362508"><a href="#">Videos<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362507"><a href="https://www.sanfoundry.com/advanced-c-programming-video/">Advanced C Programming</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363108"><a href="https://www.sanfoundry.com/c-interview-questions-video/">C Interview Questions</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382789"><a href="https://www.sanfoundry.com/training/">Training Videos</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382788"><a href="https://www.sanfoundry.com/best-reference-books/">Books</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394017"><a href="https://www.sanfoundry.com/contact/">Contact</a></li>
+</ul></div>			</div><!-- .inside-navigation -->
+		</nav><!-- #site-navigation -->
+		
+<div class="sf-search-box sf-mobile-search">
+<script async src="https://cse.google.com/cse.js?cx=3dd3bfc96f9b5c597"></script>
+<div class="gcse-search"></div>
+</div>
+
+
+	<div id="page" class="hfeed site grid-container container grid-parent">
+				<div id="content" class="site-content">
+			
+	<div id="primary" class="content-area grid-parent mobile-grid-100 push-20 grid-55 tablet-push-20 tablet-grid-55">
+		<main id="main" class="site-main">
+			
+<article id="post-82191" class="post-82191 post type-post status-publish format-standard has-post-thumbnail hentry category-java-programs category-java-programs-language" itemtype="https://schema.org/CreativeWork" itemscope>
+	<div class="inside-article">
+		
+		<header class="entry-header">
+			<h1 class="entry-title" itemprop="headline">Java  Program to Find Area of Square, Rectangle and Circle using Method Overloading</h1>			<div class="entry-meta">
+							</div><!-- .entry-meta -->
+				</header><!-- .entry-header -->
+
+		
+		<div class="entry-content" itemprop="text">
+			<div style="text-align:justify">
+This is a Java Program to Find Area of Square, Rectangle and Circle using Method Overloading.</p>
+<p>We declare three methods of same name but with different number of arguments or with different data types. Now when we call these methods using objects, corresponding methods will be called as per the number of arguments or their datatypes.</p>
+<p>Here is the source code of the Java Program to Find Area of Square, Rectangle and Circle using Method Overloading. The Java program is successfully compiled and run on a Windows system. The program output is also shown below.
+</p>
+<div class="sf-mobile-ads" style="padding-bottom: 20px;">
+<div id="9f8aa9b5-2c42-4296-896e-70772ed1db59" class="_ap_apex_ad">
+<script>
+    var adpushup = window.adpushup = window.adpushup || {};
+    adpushup.que = adpushup.que || [];
+    adpushup.que.push(function() {
+    adpushup.triggerAd("9f8aa9b5-2c42-4296-896e-70772ed1db59");
+    });
+</script>
+</div>
+</div>
+        </div>
+
+
+<div class="hk1_style-wrap5"><div class="hk1_style-wrap4"><div class="hk1_style-wrap3"><div class="hk1_style-wrap2"><div class="hk1_style-wrap"><div class="hk1_style"><div class="java"><ol><li class="li1"><pre class="de1"><span class="kw1">class</span> OverloadDemo</pre></li><li class="li1"><pre class="de1"><span class="br0">&#123;</span></pre></li><li class="li1"><pre class="de1">    <span class="kw4">void</span> area<span class="br0">&#40;</span><span class="kw4">float</span> x<span class="br0">&#41;</span></pre></li><li class="li1"><pre class="de1">    <span class="br0">&#123;</span></pre></li><li class="li1"><pre class="de1">        <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;the area of the square is &quot;</span><span class="sy0">+</span><span class="kw3">Math</span>.<span class="me1">pow</span><span class="br0">&#40;</span>x, <span class="nu0">2</span><span class="br0">&#41;</span><span class="sy0">+</span><span class="st0">&quot; sq units&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></li><li class="li1"><pre class="de1">    <span class="br0">&#125;</span></pre></li><li class="li1"><pre class="de1">    <span class="kw4">void</span> area<span class="br0">&#40;</span><span class="kw4">float</span> x, <span class="kw4">float</span> y<span class="br0">&#41;</span></pre></li><li class="li1"><pre class="de1">    <span class="br0">&#123;</span></pre></li><li class="li1"><pre class="de1">        <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;the area of the rectangle is &quot;</span><span class="sy0">+</span>x<span class="sy0">*</span>y<span class="sy0">+</span><span class="st0">&quot; sq units&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></li><li class="li1"><pre class="de1">    <span class="br0">&#125;</span></pre></li><li class="li1"><pre class="de1">    <span class="kw4">void</span> area<span class="br0">&#40;</span><span class="kw4">double</span> x<span class="br0">&#41;</span></pre></li><li class="li1"><pre class="de1">    <span class="br0">&#123;</span></pre></li><li class="li1"><pre class="de1">        <span class="kw4">double</span> z <span class="sy0">=</span> <span class="nu0">3.14</span> <span class="sy0">*</span> x <span class="sy0">*</span> x<span class="sy0">;</span></pre></li><li class="li1"><pre class="de1">        <span class="kw3">System</span>.<span class="me1">out</span>.<span class="me1">println</span><span class="br0">&#40;</span><span class="st0">&quot;the area of the circle is &quot;</span><span class="sy0">+</span>z<span class="sy0">+</span><span class="st0">&quot; sq units&quot;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></li><li class="li1"><pre class="de1">    <span class="br0">&#125;</span></pre></li><li class="li1"><pre class="de1"><span class="br0">&#125;</span></pre></li><li class="li1"><pre class="de1"><span class="kw1">class</span> Overload </pre></li><li class="li1"><pre class="de1"><span class="br0">&#123;</span></pre></li><li class="li1"><pre class="de1">     <span class="kw1">public</span> <span class="kw1">static</span> <span class="kw4">void</span> main<span class="br0">&#40;</span><span class="kw3">String</span> args<span class="br0">&#91;</span><span class="br0">&#93;</span><span class="br0">&#41;</span> </pre></li><li class="li1"><pre class="de1">	<span class="br0">&#123;</span></pre></li><li class="li1"><pre class="de1">	   OverloadDemo ob <span class="sy0">=</span> <span class="kw1">new</span> OverloadDemo<span class="br0">&#40;</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></li><li class="li1"><pre class="de1">	   ob.<span class="me1">area</span><span class="br0">&#40;</span><span class="nu0">5</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></li><li class="li1"><pre class="de1">	   ob.<span class="me1">area</span><span class="br0">&#40;</span><span class="nu0">11</span>,<span class="nu0">12</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></li><li class="li1"><pre class="de1">	   ob.<span class="me1">area</span><span class="br0">&#40;</span><span class="nu0">2.5</span><span class="br0">&#41;</span><span class="sy0">;</span></pre></li><li class="li1"><pre class="de1">        <span class="br0">&#125;</span></pre></li><li class="li1"><pre class="de1"><span class="br0">&#125;</span></pre></li></ol></div></div></div></div></div></div></div>
+
+
+<p>Output:</p>
+
+
+<div class="hk1_style-wrap5"><div class="hk1_style-wrap4"><div class="hk1_style-wrap3"><div class="hk1_style-wrap2"><div class="hk1_style-wrap"><div class="hk1_style"><div class="text"><pre class="de1">$ javac OverloadDemo.java
+$ java OverloadDemo
+&nbsp;
+the area of the square is 25.0 sq units
+the area of the rectangle is 132.0 sq units
+the area of the circle is 19.625 sq units</pre></div></div></div></div></div></div></div>
+
+
+<p><strong>Sanfoundry Global Education &#038; Learning Series &#8211; 1000 Java Programs.</strong></p>
+<div id="sf-ads-mi1-336-280" class="sf-mobile-ads">
+<div style="font-size:13px; text-align: center;">advertisement</div>
+<div id="e5da93a0-b61a-4789-96be-a57ebec165b0" class="_ap_apex_ad">
+<script>
+    var adpushup = window.adpushup || {};
+    adpushup.que = adpushup.que || [];
+    adpushup.que.push(function () {
+      if (adpushup.config.platform === "MOBILE") {
+        adpushup.triggerAd("e5da93a0-b61a-4789-96be-a57ebec165b0");
+      } else if ((window.outerWidth <= 768) || (window.outerWidth == 0)) {
+        adpushup.triggerAd("e5da93a0-b61a-4789-96be-a57ebec165b0");
+      }
+    });
+</script>
+</div>
+</div>
+	
+<div class="sf-desktop-ads">
+<div style="font-size:13px; text-align: center; margin-top:20px;">advertisement</div>
+<div id="sf-ads-drbtf1">
+<div id="7cee830d-5f11-4a2b-b356-93cc453475a0" class="_ap_apex_ad" style="max-height:300px">
+<script>
+    var adpushup = window.adpushup || {};
+    adpushup.que = adpushup.que || [];
+    adpushup.que.push(function () {
+      if ( adpushup.config.platform === "DESKTOP" || adpushup.config.platform === "TABLET" ) {
+        adpushup.triggerAd("7cee830d-5f11-4a2b-b356-93cc453475a0");
+      }
+    });
+</script>
+</div>
+</div>
+</div>
+	
+<p><a href="https://www.sanfoundry.com/best-reference-books-programming-language-java/">Here&#8217;s the list of Best Books in Java Programming, Data Structures and Algorithms.</a></p>
+</p>
+<span style="background-color: yellow;"><strong>If you find any mistake above, kindly email to <a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="f0959e8185998289b083919e969f859e948289de939f9d">[email&#160;protected]</a></strong></span><br>
+                <p></p><div style="margin-bottom:20px"><div class="sf-nav-prev-bottom">&laquo; <a href="https://www.sanfoundry.com/java-program-find-prime-numbers-within-range-n1-n2/" rel="prev">Prev - Java Program to Find Prime Numbers in a Given Range</a></div><div class="sf-nav-next-bottom">&raquo; <a href="https://www.sanfoundry.com/java-program-convert-decimal-binary-number-count-number-1s/" rel="next">Next - Java Program to Convert Decimal to Binary and Count the Number of 1s</a></div><div style="clear:both;"></div></div> <div class="sf-post-content-category"><strong>Related Posts:</strong><br><br><ul><li>Apply for <a href="https://www.sanfoundry.com/java-programming-internship/">Java Internship</a></li>
+<li>Check <a href="https://www.sanfoundry.com/best-reference-books-programming-language-java/">Java Books</a></li>
+<li>Check <a href="https://www.sanfoundry.com/best-reference-books-programming-hot-technologies/">Programming Books</a></li>
+<li>Practice <a href="https://www.sanfoundry.com/bachelor-computer-applications-questions-answers/">BCA MCQs</a></li>
+<li>Practice <a href="https://www.sanfoundry.com/programming-questions-answers/">Programming MCQs</a></li>
+</ul></div>		</div><!-- .entry-content -->
+
+					<footer class="entry-meta">
+							</footer><!-- .entry-meta -->
+		
+
+<div id="sf-ads-mbtf1-336-280" class="sf-mobile-ads">
+<div style="font-size:13px; text-align: center;">advertisement</div>
+<div id="658ed863-6c61-464d-9aa2-c727da2a861a" class="_ap_apex_ad">
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    var adpushup = window.adpushup || {};
+    adpushup.que = adpushup.que || [];
+    adpushup.que.push(function () {
+      if (adpushup.config.platform === "MOBILE") {
+        adpushup.triggerAd("658ed863-6c61-464d-9aa2-c727da2a861a");
+      } else if ((window.outerWidth <= 768) || (window.outerWidth == 0)) {
+        adpushup.triggerAd("658ed863-6c61-464d-9aa2-c727da2a861a");
+      }
+    });
+  </script>
+</div>
+</div>
+
+     
+	<div class="sf-post-yarpp">
+	<div class='yarpp yarpp-related yarpp-related-website yarpp-template-list'>
+<!-- YARPP List -->
+<h3>Recommended Articles:</h3><ol>
+<li><a href="https://www.sanfoundry.com/java-program-make-shape-interface-implement-using-circle-rectangle-class/" rel="bookmark" title="Java Program to Implement Shape Interface using Circle and Rectangle Class">Java Program to Implement Shape Interface using Circle and Rectangle Class </a></li>
+<li><a href="https://www.sanfoundry.com/java-program-find-perimeter-circle-rectangle-triangle/" rel="bookmark" title="Java Program to Find the Perimeter of a Circle, Rectangle and Triangle">Java Program to Find the Perimeter of a Circle, Rectangle and Triangle </a></li>
+<li><a href="https://www.sanfoundry.com/java-program-find-arithmetic-sum-2-or-3-or-4-variables-passing-argument-using-method-overloading/" rel="bookmark" title="Java Program to Find Arithmetic Sum by Passing Argument Using Method Overloading">Java Program to Find Arithmetic Sum by Passing Argument Using Method Overloading </a></li>
+<li><a href="https://www.sanfoundry.com/java-program-create-simple-class-find-out-area-perimeter-rectangle/" rel="bookmark" title="Java Program to Find the Area and Perimeter of Rectangle using Class">Java Program to Find the Area and Perimeter of Rectangle using Class </a></li>
+<li><a href="https://www.sanfoundry.com/csharp-program-perimeter-circle-rectangle/" rel="bookmark" title="C# Program to Find the Perimeter of Circle and Rectangle">C# Program to Find the Perimeter of Circle and Rectangle </a></li>
+<li><a href="https://www.sanfoundry.com/c-program-perimeter-circle-rectangle-triangle/" rel="bookmark" title="C Program to Find the Perimeter of a Circle, Rectangle and Triangle">C Program to Find the Perimeter of a Circle, Rectangle and Triangle </a></li>
+<li><a href="https://www.sanfoundry.com/java-program-illustrate-method-without-parameters-without-return-type/" rel="bookmark" title="Java Program to Create a Method without Parameters and Return Type">Java Program to Create a Method without Parameters and Return Type </a></li>
+<li><a href="https://www.sanfoundry.com/object-oriented-programming-using-java-questions-answers-method-overloading/" rel="bookmark" title="Object Oriented Programming using Java Questions and Answers &#8211; Method Overloading">Object Oriented Programming using Java Questions and Answers &#8211; Method Overloading </a></li>
+<li><a href="https://www.sanfoundry.com/java-program-find-area-circle-given-radius/" rel="bookmark" title="Java Program to Find the Area of a Circle">Java Program to Find the Area of a Circle </a></li>
+<li><a href="https://www.sanfoundry.com/java-program-display-string-rectangle/" rel="bookmark" title="Java Program to Display String in a Rectangle">Java Program to Display String in a Rectangle </a></li>
+</ol>
+</div>
+	</div>
+	
+<div id="sf-ads-mbtf2-336-280" class="sf-mobile-ads">
+<div style="font-size:13px; text-align: center;">advertisement</div>
+<div id="eab65a1c-02cc-479a-a712-c5f542208b0a" class="_ap_apex_ad">
+<script>
+    var adpushup = window.adpushup || {};
+    adpushup.que = adpushup.que || [];
+    adpushup.que.push(function () {
+      if (adpushup.config.platform === "MOBILE") {
+        adpushup.triggerAd("eab65a1c-02cc-479a-a712-c5f542208b0a");
+      } else if ((window.outerWidth <= 768) || (window.outerWidth == 0)) {
+        adpushup.triggerAd("eab65a1c-02cc-479a-a712-c5f542208b0a");
+      }
+    });
+</script>
+</div>
+</div>
+
+        <div class="mobile-content sf-post-content-category"><strong>Additional Resources:</strong><br><ul><li><a href="https://www.sanfoundry.com/java-programming-examples-classes/">Java Programs on Classes and Objects</a></li><li><a href="https://www.sanfoundry.com/java-applet-programs/">Java Applet Programs</a></li><li><a href="https://www.sanfoundry.com/java-programming-examples/">Java Programming Examples</a></li><li><a href="https://www.sanfoundry.com/java-matrix-programs/">Java Matrix Programs</a></li><li><a href="https://www.sanfoundry.com/java-programming-examples-event-handling/">Event Handling in Java with Examples</a></li></ul></div><div class="mobile-content sf-post-content-category"><strong>Popular Pages:</strong><br><ul><li><a href="https://www.sanfoundry.com/searching-algorithms-java/">Searching Algorithms in Java</a></li><li><a href="https://www.sanfoundry.com/java-programming-examples-collection-api/">Java Programs on Collections</a></li><li><a href="https://www.sanfoundry.com/java-programming-examples-data-structures/">Data Structures in Java</a></li><li><a href="https://www.sanfoundry.com/tree-java/">Tree Programs in Java</a></li><li><a href="https://www.sanfoundry.com/sorting-algorithms-java/">Sorting Algorithms in Java</a></li></ul></div>	</div><!-- .inside-article -->
+</article><!-- #post-## -->
+ <div class="sf-post-mailerlite-category">
+<div class="ml-form-embed" data-account="381541:z7o9v6x3r7" data-form="5090753:k5y3o0"></div>
+</div>
+      <div style="padding:10px;background:#FFFFFF">
+<div style="text-align:center">
+Subscribe to our <a href="https://www.sanfoundry.com/newsletter/">Newsletters (Subject-wise)</a>. Participate in the Sanfoundry Certification <a href="https://www.sanfoundry.com/contests/">contest</a> to get free Certificate of Merit. Join our social networks below and stay updated with latest contests, videos, internships and jobs!<br><br>
+
+<a href="https://www.youtube.com/c/SanfoundryOfficial/?sub_confirmation=1" rel="nofollow noopener" target="_blank">Youtube</a> | <a href="https://t.me/sanfoundry" rel="nofollow noopener" target="_blank">Telegram</a> | <a href="https://www.linkedin.com/company/sanfoundry/" rel="nofollow noopener" target="_blank">LinkedIn</a> | <a href="https://www.instagram.com/sanfoundry" rel="nofollow noopener" target="_blank">Instagram</a> | <a href="https://www.facebook.com/sanfoundry" rel="nofollow noopener" target="_blank">Facebook</a> | <a href="https://www.twitter.com/sanfoundry" rel="nofollow noopener" target="_blank">Twitter</a> | <a href="https://www.pinterest.com/sanfoundry/" rel="nofollow noopener" target="_blank">Pinterest</a>
+</div>
+    </div>
+<div class="sf-post-bio">
+<div style="float: left; padding-right: 10px;">
+<noscript><img src="https://www.sanfoundry.com/wp-content/uploads/2017/01/Manish2.png" alt="Manish Bhojasia - Founder & CTO at Sanfoundry"          class="aligncenter" width="150px" height="150px"></noscript><img src='data:image/svg+xml,%3Csvg%20xmlns=%22http://www.w3.org/2000/svg%22%20viewBox=%220%200%20150%20150%22%3E%3C/svg%3E' data-src="https://www.sanfoundry.com/wp-content/uploads/2017/01/Manish2.png" alt="Manish Bhojasia - Founder & CTO at Sanfoundry"          class="lazyload aligncenter" width="150px" height="150px">
+</div>
+<a href="https://www.sanfoundry.com/founder/">Manish Bhojasia</a>, a technology veteran with 20+ years @ Cisco & Wipro, is Founder and    CTO at <strong>Sanfoundry</strong>. He lives in Bangalore, and focuses on development of Linux Kernel, SAN Technologies, Advanced C,      Data Structures & Alogrithms.
+Stay connected with him at <a href="https://www.linkedin.com/in/manishbhojasia" rel="nofollow noopener" target="_blank">LinkedIn</a>.
+<br>
+<br>
+Subscribe to his free Masterclasses at <a href="https://www.youtube.com/c/SanfoundryOfficial/?sub_confirmation=1" rel="nofollow noopener" target="_blank">Youtube</a> & discussions at <a href="https://t.me/sanfoundryclasses" rel="nofollow noopener" target="_blank">Telegram    SanfoundryClasses</a>.
+<div style="clear: left;"></div>
+</div>
+    		</main><!-- #main -->
+	</div><!-- #primary -->
+
+	<div id="left-sidebar" class="widget-area grid-20 tablet-grid-20 mobile-grid-100 grid-parent sidebar pull-55 tablet-pull-55" itemtype="https://schema.org/WPSideBar" itemscope>
+	<div class="inside-left-sidebar">
+		<aside id="custom_html-550" class="widget_text widget inner-padding widget_custom_html"><div class="textwidget custom-html-widget">
+
+<h2 class="sf-widget-title">Java Programming</h2>
+<div class="sf-postw-category">
+<span class="collapseomatic  colomat-close" id="id666d8dd9d5e7f"  tabindex="" title="Java Programs"    >Java Programs</span><div id="target-id666d8dd9d5e7f" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-programming-examples/">1000 Java Programs</a>
+<a href="https://www.sanfoundry.com/1000-java-algorithms-problems-programming-examples/">1000 Java Algorithms</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-data-structures/">Data Structures in Java</a>
+<a href="https://www.sanfoundry.com/java-programming-examples/#simple-java-programs">Simple Java Programs</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-arrays/">Java Array Programs</a>
+<a href="https://www.sanfoundry.com/java-matrix-programs/">Java Matrix Programs</a>
+<a href="https://www.sanfoundry.com/java-programming-examples/#java-programs-math-functions">Java Mathematical Programs</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-set-string-problems-algorithms/">Java Programs on String</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-classes/">Java Programs on Classes</a>
+<a href="https://www.sanfoundry.com/java-programming-examples/#java-programs-inheritance">Java Programs on Inheritance</a>
+<a href="https://www.sanfoundry.com/java-programming-examples/#java-programs-exception-handling">Java Programs on Exception Handling</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-event-handling/">Java Programs on Event Handling</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-collection-api/">Java Programs on Collections</a>
+<a href="https://www.sanfoundry.com/java-applet-programs/">Java Applet Programs</a>
+<a href="https://www.sanfoundry.com/tree-java/">Tree Programs in Java</a>
+<a href="https://www.sanfoundry.com/searching-algorithms-java/">Searching Algorithms in Java</a>
+<a href="https://www.sanfoundry.com/sorting-algorithms-java/">Sorting Algorithms in Java</a>
+</div>
+<span class="collapseomatic  colomat-close" id="id666d8dd9d5e9f"  tabindex="" title="Java Programs - Data Types & Operators"    >Java Programs - Data Types & Operators</span><div id="target-id666d8dd9d5e9f" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-convert-integer-values-binary/">Convert Integer Values to Binary in Java</a>
+<a href="https://www.sanfoundry.com/java-program-convert-integer-values-byte-character-float/">Type Conversions in Java</a>
+<a href="https://www.sanfoundry.com/java-program-convert-long-byte-value/">Convert Long to Byte in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-arithmetic-operators/">Arithmetic Operators in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-relational-operators/">Relational Operators in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-various-boolean-operators/">Boolean Operators in Java</a>
+<a href="https://www.sanfoundry.com/java-program-find-largest-between-three-numbers-using-ternary-operator/">Largest 3 Numbers using Ternary Operator in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-pre-post-increment-decrement-operator/">Pre & Post Increment & Decrement in Java</a>
+<a href="https://www.sanfoundry.com/java-program-find-season-using-switch-statement/">Find Season using Switch Statement in Java</a>
+</div>
+<span class="collapseomatic  colomat-close" id="id666d8dd9d5eae"  tabindex="" title="Java Programs - Object & Method Overloading"    >Java Programs - Object & Method Overloading</span><div id="target-id666d8dd9d5eae" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-return-value-from-method/">Returning a Value from Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-find-out-number-objects-created-class/">Count No of Objects Created for Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-implement-concept-passing-object-return-object/">Passing & Returning Objects in Java</a>
+<a href="https://www.sanfoundry.com/java-program-shows-nesting-methods/">Nesting of Methods in Java</a>
+<a href="https://www.sanfoundry.com/java-program-calculate-sum-two-byte-values-using-type-casting/">Byte Addition using Type Casting in Java</a>
+<a href="https://www.sanfoundry.com/java-program-find-arithmetic-sum-2-or-3-or-4-variables-passing-argument-using-method-overloading/">Arithmetic Operations using Method Overloading in Java</a>
+<a href="https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/">Find Area of Shapes using Method Overloading in Java</a>
+</div>
+<span class="collapseomatic  colomat-close" id="id666d8dd9d5ebd"  tabindex="" title="Java Programs - Classes"    >Java Programs - Classes</span><div id="target-id666d8dd9d5ebd" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-illustrates-use-abstract-class-method/">Abstract Class & Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-all-features-abstract-class/">Abstract Class Features in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-methods-class/">Java Class Methods</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-final-keyword/">Final Keyword in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-hashcode-method/">HashCode() Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-method-without-parameters-with-return-type/">Create Method without Parameters & with Return Type in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-method-without-parameters-without-return-type/">Create Method without Parameters & Return Type in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-method-two-parameters-return-type/">Create Method with 2 Parameters & without Return Type in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-constructor/">Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-chaining-constructor/">Constructor Chaining in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-object-class-assign-value-object-using-constructor/">Create Object using Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-allocate-initialize-super-class-member-constructor/">Super Class Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-which-2-classes-which-initializes-string-its-constructor/">String Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-demonstrate-usage-instance-variable-x-test-class/">Instance Variable in Java</a>
+<a href="https://www.sanfoundry.com/java-program-demonstrate-usage-static-variable-x-test-class/">Static Variable in Java</a>
+<a href="https://www.sanfoundry.com/java-program-test-static-method-access-static-non-static-variable/">Check Accessibility of Static & Non-Static Variables by Static Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrates-use-referencing-object-inner-class/">Object Reference from Inner Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrates-use-instance-inner-class/">Instance Inner Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrates-use-static-inner-class/">Static Inner Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-check-whether-which-one-executed-first-static-block-static-method/">Static Block or Static Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-prove-default-constructor-super-class-available-sub-class-default/">Default Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-access-super-class-method-instance-variable-using-super-keyword-subclass/">Access Super Class Method & Instance Variable Using Super Keyword in Java</a>
+<a href="https://www.sanfoundry.com/java-program-access-super-class-method-instance-variable-without-using-super-keyword-subclass/">Access Super Class Method & Instance Variable without Super Keyword in Java</a>
+<a href="https://www.sanfoundry.com/java-program-understand-parameterized-constructor-super-class-subclass-using-super/">Parameterized Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-outer-class-bankacct-inner-class-interest/">Create Outer Class BankAcct & Inner Class Interest in Java</a>
+<a href="https://www.sanfoundry.com/java-program-interchange-two-employee-objects-passing-them-swap-method/">Swap Objects using Swap() Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-make-shape-interface-implement-using-circle-rectangle-class/">Shape Interface using Circle & Rectangle Class in Java</a>
+</div>
+<span class="collapseomatic  colomat-close" id="id666d8dd9d5eca"  tabindex="" title="Java Programs - Inheritance"    >Java Programs - Inheritance</span><div id="target-id666d8dd9d5eca" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-use-this-keyword-inheritance-class/">This Keyword in Java</a>
+<a href="https://www.sanfoundry.com/java-program-use-super-keyword-inheritance-class/">Super Keyword in Java</a>
+<a href="https://www.sanfoundry.com/java-program-show-method-overriding-class-using-inheritance-class/">Method Overriding using Inheritance in Java</a>
+<a href="https://www.sanfoundry.com/java-program-access-super-class-method-overriding/">Super Class in Method Overriding in Java</a>
+<a href="https://www.sanfoundry.com/java-program-show-implementation-interface/">Interface Program in Java</a>
+</div>
+<span class="collapseomatic  colomat-close" id="id666d8dd9d5ed5"  tabindex="" title="Java Programs - Exception Handling"    >Java Programs - Exception Handling</span><div id="target-id666d8dd9d5ed5" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-handle-exception-using-try-multiple-catch-block/">Exception using Try & Multiple Catch Block in Java</a>
+<a href="https://www.sanfoundry.com/java-program-handle-user-defined-exception-using-throw-keyword/">User Defined Exception using Throw Keyword in Java</a>
+</div>
+<span class="collapseomatic  colomat-close" id="id666d8dd9d5edf"  tabindex="" title="Java Programs - String Handling"    >Java Programs - String Handling</span><div id="target-id666d8dd9d5edf" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-getchar-split-method/">getChar() & split() Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-split-pieces-wherever-space-found/">Split() String Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-strings-use-some-important-methods-string-class/">String Class Methods in Java</a>
+</div>
+<span class="collapseomatic  colomat-close" id="id666d8dd9d5eed"  tabindex="" title="Java Programs - Event Handling"    >Java Programs - Event Handling</span><div id="target-id666d8dd9d5eed" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-handle-keyboardevent/">KeyBoardEvent in Java</a>
+<a href="https://www.sanfoundry.com/java-program-handle-mouseevent/">MouseEvent in Java</a>
+<a href="https://www.sanfoundry.com/java-program-close-frame-using-windowadapter-class/">Close Frame using WindowAdapter Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-close-frame-using-anonymous-class/">Close Frame using Anonymous Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-draw-line-using-gui/">Draw Line using GUI in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-string-rectangle/">Display String in Rectangle in Java</a>
+<a href="https://www.sanfoundry.com/java-program-print-concentric-circles/">Print Concentric Circles in Java</a>
+<a href="https://www.sanfoundry.com/java-program-draw-smiling-face-using-methods-graphics-class/">Draw a Smiley Face using Graphics in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-several-dots-screen-continuously/">Display Several Dots on Screen Continuously in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-color-dialog-box-change-background-color-frame/">JColorChooser Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-string-background-color-cyan-frame/">Change Frame Background Color as Cyan in Java</a>
+<a href="https://www.sanfoundry.com/java-program-fonts-available-local-system/">Program to know which Fonts are Available in System in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-message-new-frame/">Display Message in New Frame in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-text-different-fonts/">Display Text in Different Fonts in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-text-frame-using-drawstring-inheriting-jpanel-class/">Display Text in Frame using DrawString & Inherit JPanel Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-some-text-frame-help-label/">Display Text in Frame using Labels in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-labels-text-fields-entering-name-secured-password/">Create Text Area & Password Field in Java</a>
+<a href="https://www.sanfoundry.com/java-program-get-set-state-get-label-check-box/">getState(), setState() & getLabel() in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-frames-switch-frames-using-buttons/">Create & Switch b/w Frames using Buttons in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-button-display-image-frame/">Displaying Image on Clicking JButton in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-radio-buttons-display-selected-button-label/">Create 2 Radio Buttons & Display Selected Button Label in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-push-buttons-draw-different-borders-buttons/">Create & Set Border to Push Buttons in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-toolbar-3-push-buttons-image-display-selected-button-label/">Create Toolbar with 3 Image Push Buttons in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-split-pane-parts-display-button-display-text-inside-text-area-button-clicked/">Create Split Pane with Two Parts in Java</a>
+<a href="https://www.sanfoundry.com/java-program-progress-bar-5-units-every-click-push-button/">Progress a Progress Bar by 5 Units on Click in Java</a>
+<a href="https://www.sanfoundry.com/java-program-show-functioning-toggle-button/">Toggle Button in Java</a>
+<a href="https://www.sanfoundry.com/java-program-change-background-colour-applet-clicking-control-button/">Change Applet Background Colour when Button Clicked in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-group-buttons-arrange-container-using-flow-layout-manager/">Create Buttons & Arrange in Container using Flow Layout Manager in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-check-boxes-radio-buttons-display-selected-text-area/">Create Check Boxes & Radio Buttons in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-list-box-select-multiple-items-display-frame/">Create List Box in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-combo-box-select-one-option-display-label-option-selected/">Create Combo Box in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-vertical-scrollbar-scroll-button-length-30px/">Java AWT Scrollbar</a>
+<a href="https://www.sanfoundry.com/java-program-create-menu-with-several-menu-items/">Create Menu & Menu Bar in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-choice-menu-select-item-display-frame/">AWT Choice Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-menu-handle-file-open-event-user/">Create Menu & Handle File Open Event in Java</a>
+<a href="https://www.sanfoundry.com/java-program-perform-menu-driven-arithmetic-operations-using-switch-case/">Arithmetic Operations using Switch Case in Java</a>
+<a href="https://www.sanfoundry.com/java-program-changes-look-feel-component/">Program to Change Component Look & Feel in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-jtree-root-node-other-nodes-spanning-root-node/">JTree Program in Java</a>
+</div>
+<span class="collapseomatic  colomat-close" id="id666d8dd9d5ef9"  tabindex="" title="Java Resources"    >Java Resources</span><div id="target-id666d8dd9d5ef9" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-questions-answers-freshers-experienced/">1000 Java MCQ</a>
+<a href="https://www.sanfoundry.com/java-interview-questions/">Java Interview Questions</a>
+<a href="https://test.sanfoundry.com/java-programming-tests/">Java Programming Tests</a>
+<a href="https://test.sanfoundry.com/java-programming-certification-test/">Java Certification Test</a>
+<a href="https://www.sanfoundry.com/java-programming-internship/">Java Internship</a>
+<a href="https://www.sanfoundry.com/best-reference-books-programming-language-java/">Best Java Books</a>
+<a href="https://www.sanfoundry.com/java-android-programing-examples/">100+ Android Java Programs</a>
+</div>
+</div>
+
+</div></aside><aside id="text-292" class="widget inner-padding widget_text">			<div class="textwidget">
+<div id="sf-ads-dlb-160-600" class="sf-desktop-ads">
+<div id="c02687cc-e3c1-4ea4-9bc7-d8fafbd90b16" class="_ap_apex_ad">
+<script>
+    var adpushup = window.adpushup || {};
+    adpushup.que = adpushup.que || [];
+    adpushup.que.push(function () {
+      if ( adpushup.config.platform === "DESKTOP" || adpushup.config.platform === "TABLET" ) {
+        adpushup.triggerAd("c02687cc-e3c1-4ea4-9bc7-d8fafbd90b16");
+      }
+    });
+</script>
+</div>
+</div>
+        </div>
+		</aside>	</div><!-- .inside-left-sidebar -->
+</div><!-- #secondary -->
+<div id="right-sidebar" class="widget-area grid-25 tablet-grid-25 grid-parent sidebar" itemtype="https://schema.org/WPSideBar" itemscope>
+	<div class="inside-right-sidebar">
+		<aside id="text-300" class="widget inner-padding widget_text">			<div class="textwidget"><script async src="https://cse.google.com/cse.js?cx=3dd3bfc96f9b5c597"></script><div class="sf-search-box"><div class="gcse-search"></div></div></div>
+		</aside><aside id="text-294" class="widget inner-padding widget_text">			<div class="textwidget">
+<div id="sf-ads-drt-300-250" class="sf-desktop-ads">
+<div id="e2124771-3969-40d9-b49f-be6ca0ef9aeb" class="_ap_apex_ad">
+<script>
+    var adpushup = window.adpushup || {};
+    adpushup.que = adpushup.que || [];
+    adpushup.que.push(function() {
+      if (adpushup.config.platform === "DESKTOP" || adpushup.config.platform === "TABLET") {
+        adpushup.triggerAd("e2124771-3969-40d9-b49f-be6ca0ef9aeb");
+      }
+    });
+</script>
+</div>
+</div>
+        </div>
+		</aside><aside id="text-298" class="widget inner-padding widget_text">			<div class="textwidget"><span style="display:block" class="sf-widget-title">Related Topics</span><a href="https://www.sanfoundry.com/java-programming-examples-classes/">Java Programs on Classes and Objects</a><a href="https://www.sanfoundry.com/java-applet-programs/">Java Applet Programs</a><a href="https://www.sanfoundry.com/java-programming-examples/">Java Programming Examples</a><a href="https://www.sanfoundry.com/java-matrix-programs/">Java Matrix Programs</a><a href="https://www.sanfoundry.com/java-programming-examples-event-handling/">Event Handling in Java with Examples</a></div>
+		</aside><aside id="text-295" class="widget inner-padding widget_text">			<div class="textwidget">
+<div id="sf-ads-drm-300-600" class="sf-desktop-ads">
+<div id="c702df7a-db9a-4387-b99f-0010e56c9aeb" class="_ap_apex_ad">
+  <script>
+    var adpushup = window.adpushup || {};
+    adpushup.que = adpushup.que || [];
+    adpushup.que.push(function () {
+      if ( adpushup.config.platform === "DESKTOP" || adpushup.config.platform === "TABLET" ) {
+        adpushup.triggerAd("c702df7a-db9a-4387-b99f-0010e56c9aeb");
+      }
+    });
+  </script>
+</div>
+</div>
+	</div>
+		</aside><aside id="text-299" class="widget inner-padding widget_text">			<div class="textwidget"><span style="display:block" class="sf-widget-title">Popular Pages</span><a href="https://www.sanfoundry.com/searching-algorithms-java/">Searching Algorithms in Java</a><a href="https://www.sanfoundry.com/java-programming-examples-collection-api/">Java Programs on Collections</a><a href="https://www.sanfoundry.com/java-programming-examples-data-structures/">Data Structures in Java</a><a href="https://www.sanfoundry.com/tree-java/">Tree Programs in Java</a><a href="https://www.sanfoundry.com/sorting-algorithms-java/">Sorting Algorithms in Java</a></div>
+		</aside><aside id="text-296" class="widget inner-padding widget_text">			<div class="textwidget">
+<div id="sf-ads-drb-300-600" class="sf-desktop-ads">
+<div id="f1f620fc-81f8-425a-ac0f-57d3c30d77b0" class="_ap_apex_ad">
+  <script>
+    var adpushup = window.adpushup || {};
+    adpushup.que = adpushup.que || [];
+    adpushup.que.push(function () {
+      if ( adpushup.config.platform === "DESKTOP" || adpushup.config.platform === "TABLET" ) {
+        adpushup.triggerAd("f1f620fc-81f8-425a-ac0f-57d3c30d77b0");
+      }
+    });
+  </script>
+</div>
+</div>
+	</div>
+		</aside>	</div><!-- .inside-right-sidebar -->
+</div><!-- #secondary -->
+
+	</div><!-- #content -->
+</div><!-- #page -->
+
+
+<div class="site-footer">
+				<div id="footer-widgets" class="site footer-widgets">
+				<div class="footer-widgets-container grid-container grid-parent">
+					<div class="inside-footer-widgets">
+							<div class="footer-widget-1 grid-parent grid-100 tablet-grid-50 mobile-grid-100">
+		<aside id="custom_html-386" class="widget_text widget inner-padding widget_custom_html"><div class="textwidget custom-html-widget"><div style="text-align:center;">
+<a href="https://www.sanfoundry.com/about/">About</a> | <a href="https://test.sanfoundry.com/certification-tests/">Certifications</a> | <a href="https://www.sanfoundry.com/internship/">Internships</a> | <a href="https://www.sanfoundry.com/jobs/">Jobs</a> | <a href="https://www.sanfoundry.com/privacy-policy/">Privacy Policy</a> | <a href="https://www.sanfoundry.com/tos-privacy-policy/">Terms</a> | <a href="https://www.sanfoundry.com/copyright/">Copyright</a> | <a href="https://www.sanfoundry.com/contact/">Contact</a> 
+</div></div></aside><aside id="lsi_widget-2" class="widget inner-padding widget_lsi_widget"><ul class="lsi-social-icons icon-set-lsi_widget-2" style="text-align: center"><li class="lsi-social-facebook"><a class="" rel="nofollow noopener noreferrer" title="Facebook" aria-label="Facebook" href="https://www.facebook.com/sanfoundry" target="_blank"><i class="lsicon lsicon-facebook"></i></a></li><li class="lsi-social-linkedin"><a class="" rel="nofollow noopener noreferrer" title="LinkedIn" aria-label="LinkedIn" href="https://www.linkedin.com/company/sanfoundry" target="_blank"><i class="lsicon lsicon-linkedin"></i></a></li><li class="lsi-social-twitter"><a class="" rel="nofollow noopener noreferrer" title="Twitter" aria-label="Twitter" href="https://www.twitter.com/sanfoundry" target="_blank"><i class="lsicon lsicon-twitter"></i></a></li><li class="lsi-social-instagram"><a class="" rel="nofollow noopener noreferrer" title="Instagram" aria-label="Instagram" href="https://www.instagram.com/sanfoundry" target="_blank"><i class="lsicon lsicon-instagram"></i></a></li><li class="lsi-social-pinterest"><a class="" rel="nofollow noopener noreferrer" title="Pinterest" aria-label="Pinterest" href="https://www.pinterest.com/sanfoundry/" target="_blank"><i class="lsicon lsicon-pinterest"></i></a></li><li class="lsi-social-youtube"><a class="" rel="nofollow noopener noreferrer" title="YouTube" aria-label="YouTube" href="https://www.youtube.com/c/SanfoundryOfficial/?sub_confirmation=1" target="_blank"><i class="lsicon lsicon-youtube"></i></a></li></ul></aside>	</div>
+						</div>
+				</div>
+			</div>
+				<footer class="site-info" itemtype="https://schema.org/WPFooter" itemscope>
+			<div class="inside-site-info grid-container grid-parent">
+								<div class="copyright-bar">
+					&copy; 2011-2024 Sanfoundry. All Rights Reserved.				</div>
+			</div>
+		</footer><!-- .site-info -->
+		</div><!-- .site-footer -->
+
+<a title="Scroll back to top" rel="nofollow" href="#" class="generate-back-to-top" style="opacity:0;visibility:hidden;" data-scroll-speed="400" data-start-scroll="300">
+				<span class="screen-reader-text">Scroll back to top</span>
+				<span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span>
+			</a>		<nav id="generate-slideout-menu" class="main-navigation slideout-navigation" itemtype="https://schema.org/SiteNavigationElement" itemscope style="display: none;">
+			<div class="inside-navigation grid-container grid-parent">
+				<div class="main-nav"><ul id="menu-offcanvasmobile-2" class=" slideout-menu"><li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-269885"><a href="#">Branchwise MCQs<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-272820"><a href="#">CS &#8211; IT &#8211; IS<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269898"><a href="https://www.sanfoundry.com/programming-questions-answers/">Programming</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269883"><a href="https://www.sanfoundry.com/computer-science-questions-answers/">CS</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269887"><a href="https://www.sanfoundry.com/information-technology-questions-answers/">IT</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269888"><a href="https://www.sanfoundry.com/information-science-questions-answers/">IS</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-272821"><a href="#">ECE &#8211; EEE &#8211; EE<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269903"><a href="https://www.sanfoundry.com/electronics-communication-engineering-questions-answers/">ECE</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269904"><a href="https://www.sanfoundry.com/electrical-electronics-engineering-questions-answers/">EEE</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269905"><a href="https://www.sanfoundry.com/electrical-engineering-questions-answers/">EE</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269906"><a href="https://www.sanfoundry.com/civil-engineering-questions-answers/">Civil</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269907"><a href="https://www.sanfoundry.com/mechanical-engineering-questions-answers/">Mechanical</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269913"><a href="https://www.sanfoundry.com/chemical-engineering-questions-answers/">Chemical</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269914"><a href="https://www.sanfoundry.com/metallurgical-engineering-questions-answers/">Metallurgy</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-290523"><a href="https://www.sanfoundry.com/mining-engineering-questions-answers/">Mining</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269915"><a href="https://www.sanfoundry.com/instrumentation-engineering-questions-answers/">Instrumentation</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269916"><a href="https://www.sanfoundry.com/aerospace-engineering-questions-answers/">Aerospace</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269917"><a href="https://www.sanfoundry.com/aeronautical-engineering-questions-answers/">Aeronautical</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269918"><a href="https://www.sanfoundry.com/biotechnology-questions-answers/">Biotechnology</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269919"><a href="https://www.sanfoundry.com/agricultural-engineering-questions-answers/">Agriculture</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269920"><a href="https://www.sanfoundry.com/marine-engineering-questions-answers/">Marine</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327387"><a href="https://www.sanfoundry.com/mechatronics-engineering-questions-answers/">Mechatronics</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269921"><a href="https://www.sanfoundry.com/master-computer-applications-questions-answers/">MCA</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-269922"><a href="https://www.sanfoundry.com/bachelor-computer-applications-questions-answers/">BCA</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313196"><a href="#">School MCQs<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-327390"><a href="#">Class 8<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327397"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-8/">Mathematics – 8</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-327392"><a href="#">Class 9<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327396"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-9/">Mathematics – 9</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-327393"><a href="#">Class 10<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-327395"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-10/">Mathematics – 10</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313205"><a href="#">Class 11<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313199"><a href="https://www.sanfoundry.com/1000-physics-questions-answers-class-11/">Physics &#8211; 11</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313203"><a href="https://www.sanfoundry.com/1000-chemistry-questions-answers-class-11/">Chemistry &#8211; 11</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313201"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-11/">Mathematics &#8211; 11</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313198"><a href="https://www.sanfoundry.com/1000-biology-questions-answers-class-11/">Biology &#8211; 11</a></li>
+	</ul>
+</li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313206"><a href="#">Class 12<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+	<ul class="sub-menu">
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313204"><a href="https://www.sanfoundry.com/1000-physics-questions-answers-class-12/">Physics &#8211; 12</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313202"><a href="https://www.sanfoundry.com/1000-chemistry-questions-answers-class-12/">Chemistry &#8211; 12</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313200"><a href="https://www.sanfoundry.com/1000-mathematics-questions-answers-class-12/">Mathematics &#8211; 12</a></li>
+		<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-313197"><a href="https://www.sanfoundry.com/1000-biology-questions-answers-class-12/">Biology &#8211; 12</a></li>
+	</ul>
+</li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-394018"><a href="#">DSA<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394024"><a href="https://www.sanfoundry.com/c-programming-examples/">C Programs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394023"><a href="https://www.sanfoundry.com/1000-c-algorithms-problems-programming-examples/">Algorithms in C</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394019"><a href="https://www.sanfoundry.com/c-programming-examples-data-structures/">Data Structures in C</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394026"><a href="https://www.sanfoundry.com/cpp-programs/">C++ Programs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394022"><a href="https://www.sanfoundry.com/1000-cpp-algorithms-problems-programming-examples/">C++ Algorithms</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394020"><a href="https://www.sanfoundry.com/cpp-programming-examples-data-structures/">Data Structures in C++</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394028"><a href="https://www.sanfoundry.com/java-programming-examples/">Java Programs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394027"><a href="https://www.sanfoundry.com/1000-java-algorithms-problems-programming-examples/">Java Algorithms</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394021"><a href="https://www.sanfoundry.com/java-programming-examples-data-structures/">Data Structures in Java</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394029"><a href="https://www.sanfoundry.com/python-problems-solutions/">Python Programs</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394025"><a href="https://www.sanfoundry.com/csharp-programming-examples/">C# Programs</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-313267"><a href="#">Test<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-272830"><a href="https://test.sanfoundry.com/">All-Tests</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394033"><a href="https://www.sanfoundry.com/certification/">Certification</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-post menu-item-313210"><a href="https://www.sanfoundry.com/contests-results/">Download Certificates</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-398563"><a href="#">Job<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-398559"><a href="https://www.sanfoundry.com/jobs/">All Jobs</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-398560"><a href="https://test.sanfoundry.com/job-tests/">Job Tests</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-398562"><a href="#">Internship<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-398561"><a href="https://www.sanfoundry.com/internship/">All Internships</a></li>
+	<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-269900"><a href="https://test.sanfoundry.com/internship-tests/">Internship Tests</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-269882"><a href="https://www.sanfoundry.com/training/">Training</a></li>
+<li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-362508"><a href="#">Videos<span role="presentation" class="dropdown-menu-toggle"><span class="gp-icon icon-arrow"><svg viewBox="0 0 330 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+						<path d="M305.913 197.085c0 2.266-1.133 4.815-2.833 6.514L171.087 335.593c-1.7 1.7-4.249 2.832-6.515 2.832s-4.815-1.133-6.515-2.832L26.064 203.599c-1.7-1.7-2.832-4.248-2.832-6.514s1.132-4.816 2.832-6.515l14.162-14.163c1.7-1.699 3.966-2.832 6.515-2.832 2.266 0 4.815 1.133 6.515 2.832l111.316 111.317 111.316-111.317c1.7-1.699 4.249-2.832 6.515-2.832s4.815 1.133 6.515 2.832l14.162 14.163c1.7 1.7 2.833 4.249 2.833 6.515z" fill-rule="nonzero"/>
+					</svg></span></span></a>
+<ul class="sub-menu">
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-362507"><a href="https://www.sanfoundry.com/advanced-c-programming-video/">Advanced C Programming</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-363108"><a href="https://www.sanfoundry.com/c-interview-questions-video/">C Interview Questions</a></li>
+	<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382789"><a href="https://www.sanfoundry.com/training/">Training Videos</a></li>
+</ul>
+</li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-382788"><a href="https://www.sanfoundry.com/best-reference-books/">Books</a></li>
+<li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-394017"><a href="https://www.sanfoundry.com/contact/">Contact</a></li>
+</ul></div><aside id="custom_html-551" class="widget_text slideout-widget widget_custom_html"><div class="textwidget custom-html-widget">
+<h2 class="sf-widget-title">Java Programming</h2>
+<div class="sf-postw-category">
+<span class="collapseomatic " id="id666d8dd9efa97"  tabindex="" title="Java Programs"    >Java Programs</span><div id="target-id666d8dd9efa97" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-programming-examples/">1000 Java Programs</a>
+<a href="https://www.sanfoundry.com/1000-java-algorithms-problems-programming-examples/">1000 Java Algorithms</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-data-structures/">Data Structures in Java</a>
+<a href="https://www.sanfoundry.com/java-programming-examples/#simple-java-programs">Simple Java Programs</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-arrays/">Java Array Programs</a>
+<a href="https://www.sanfoundry.com/java-matrix-programs/">Java Matrix Programs</a>
+<a href="https://www.sanfoundry.com/java-programming-examples/#java-programs-math-functions">Java Mathematical Programs</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-set-string-problems-algorithms/">Java Programs on String</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-classes/">Java Programs on Classes</a>
+<a href="https://www.sanfoundry.com/java-programming-examples/#java-programs-inheritance">Java Programs on Inheritance</a>
+<a href="https://www.sanfoundry.com/java-programming-examples/#java-programs-exception-handling">Java Programs on Exception Handling</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-event-handling/">Java Programs on Event Handling</a>
+<a href="https://www.sanfoundry.com/java-programming-examples-collection-api/">Java Programs on Collections</a>
+<a href="https://www.sanfoundry.com/java-applet-programs/">Java Applet Programs</a>
+<a href="https://www.sanfoundry.com/tree-java/">Tree Programs in Java</a>
+<a href="https://www.sanfoundry.com/searching-algorithms-java/">Searching Algorithms in Java</a>
+<a href="https://www.sanfoundry.com/sorting-algorithms-java/">Sorting Algorithms in Java</a>
+</div>
+<span class="collapseomatic " id="id666d8dd9efab6"  tabindex="" title="Java Programs - Data Types & Operators"    >Java Programs - Data Types & Operators</span><div id="target-id666d8dd9efab6" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-convert-integer-values-binary/">Convert Integer Values to Binary in Java</a>
+<a href="https://www.sanfoundry.com/java-program-convert-integer-values-byte-character-float/">Type Conversions in Java</a>
+<a href="https://www.sanfoundry.com/java-program-convert-long-byte-value/">Convert Long to Byte in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-arithmetic-operators/">Arithmetic Operators in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-relational-operators/">Relational Operators in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-various-boolean-operators/">Boolean Operators in Java</a>
+<a href="https://www.sanfoundry.com/java-program-find-largest-between-three-numbers-using-ternary-operator/">Largest 3 Numbers using Ternary Operator in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-pre-post-increment-decrement-operator/">Pre & Post Increment & Decrement in Java</a>
+<a href="https://www.sanfoundry.com/java-program-find-season-using-switch-statement/">Find Season using Switch Statement in Java</a>
+</div>
+<span class="collapseomatic " id="id666d8dd9efac4"  tabindex="" title="Java Programs - Object & Method Overloading"    >Java Programs - Object & Method Overloading</span><div id="target-id666d8dd9efac4" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-return-value-from-method/">Returning a Value from Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-find-out-number-objects-created-class/">Count No of Objects Created for Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-implement-concept-passing-object-return-object/">Passing & Returning Objects in Java</a>
+<a href="https://www.sanfoundry.com/java-program-shows-nesting-methods/">Nesting of Methods in Java</a>
+<a href="https://www.sanfoundry.com/java-program-calculate-sum-two-byte-values-using-type-casting/">Byte Addition using Type Casting in Java</a>
+<a href="https://www.sanfoundry.com/java-program-find-arithmetic-sum-2-or-3-or-4-variables-passing-argument-using-method-overloading/">Arithmetic Operations using Method Overloading in Java</a>
+<a href="https://www.sanfoundry.com/java-program-find-area-square-rectangle-circle-using-method-overloading/">Find Area of Shapes using Method Overloading in Java</a>
+</div>
+<span class="collapseomatic " id="id666d8dd9efad2"  tabindex="" title="Java Programs - Classes"    >Java Programs - Classes</span><div id="target-id666d8dd9efad2" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-illustrates-use-abstract-class-method/">Abstract Class & Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-all-features-abstract-class/">Abstract Class Features in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-methods-class/">Java Class Methods</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-final-keyword/">Final Keyword in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-hashcode-method/">HashCode() Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-method-without-parameters-with-return-type/">Create Method without Parameters & with Return Type in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-method-without-parameters-without-return-type/">Create Method without Parameters & Return Type in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-method-two-parameters-return-type/">Create Method with 2 Parameters & without Return Type in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-constructor/">Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-chaining-constructor/">Constructor Chaining in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-object-class-assign-value-object-using-constructor/">Create Object using Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-allocate-initialize-super-class-member-constructor/">Super Class Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-which-2-classes-which-initializes-string-its-constructor/">String Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-demonstrate-usage-instance-variable-x-test-class/">Instance Variable in Java</a>
+<a href="https://www.sanfoundry.com/java-program-demonstrate-usage-static-variable-x-test-class/">Static Variable in Java</a>
+<a href="https://www.sanfoundry.com/java-program-test-static-method-access-static-non-static-variable/">Check Accessibility of Static & Non-Static Variables by Static Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrates-use-referencing-object-inner-class/">Object Reference from Inner Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrates-use-instance-inner-class/">Instance Inner Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-illustrates-use-static-inner-class/">Static Inner Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-check-whether-which-one-executed-first-static-block-static-method/">Static Block or Static Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-prove-default-constructor-super-class-available-sub-class-default/">Default Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-access-super-class-method-instance-variable-using-super-keyword-subclass/">Access Super Class Method & Instance Variable Using Super Keyword in Java</a>
+<a href="https://www.sanfoundry.com/java-program-access-super-class-method-instance-variable-without-using-super-keyword-subclass/">Access Super Class Method & Instance Variable without Super Keyword in Java</a>
+<a href="https://www.sanfoundry.com/java-program-understand-parameterized-constructor-super-class-subclass-using-super/">Parameterized Constructor in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-outer-class-bankacct-inner-class-interest/">Create Outer Class BankAcct & Inner Class Interest in Java</a>
+<a href="https://www.sanfoundry.com/java-program-interchange-two-employee-objects-passing-them-swap-method/">Swap Objects using Swap() Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-make-shape-interface-implement-using-circle-rectangle-class/">Shape Interface using Circle & Rectangle Class in Java</a>
+</div>
+<span class="collapseomatic " id="id666d8dd9efade"  tabindex="" title="Java Programs - Inheritance"    >Java Programs - Inheritance</span><div id="target-id666d8dd9efade" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-use-this-keyword-inheritance-class/">This Keyword in Java</a>
+<a href="https://www.sanfoundry.com/java-program-use-super-keyword-inheritance-class/">Super Keyword in Java</a>
+<a href="https://www.sanfoundry.com/java-program-show-method-overriding-class-using-inheritance-class/">Method Overriding using Inheritance in Java</a>
+<a href="https://www.sanfoundry.com/java-program-access-super-class-method-overriding/">Super Class in Method Overriding in Java</a>
+<a href="https://www.sanfoundry.com/java-program-show-implementation-interface/">Interface Program in Java</a>
+</div>
+<span class="collapseomatic " id="id666d8dd9efaea"  tabindex="" title="Java Programs - Exception Handling"    >Java Programs - Exception Handling</span><div id="target-id666d8dd9efaea" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-handle-exception-using-try-multiple-catch-block/">Exception using Try & Multiple Catch Block in Java</a>
+<a href="https://www.sanfoundry.com/java-program-handle-user-defined-exception-using-throw-keyword/">User Defined Exception using Throw Keyword in Java</a>
+</div>
+<span class="collapseomatic " id="id666d8dd9efaf3"  tabindex="" title="Java Programs - String Handling"    >Java Programs - String Handling</span><div id="target-id666d8dd9efaf3" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-illustrate-use-getchar-split-method/">getChar() & split() Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-split-pieces-wherever-space-found/">Split() String Method in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-strings-use-some-important-methods-string-class/">String Class Methods in Java</a>
+</div>
+<span class="collapseomatic " id="id666d8dd9efafe"  tabindex="" title="Java Programs - Event Handling"    >Java Programs - Event Handling</span><div id="target-id666d8dd9efafe" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-program-handle-keyboardevent/">KeyBoardEvent in Java</a>
+<a href="https://www.sanfoundry.com/java-program-handle-mouseevent/">MouseEvent in Java</a>
+<a href="https://www.sanfoundry.com/java-program-close-frame-using-windowadapter-class/">Close Frame using WindowAdapter Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-close-frame-using-anonymous-class/">Close Frame using Anonymous Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-draw-line-using-gui/">Draw Line using GUI in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-string-rectangle/">Display String in Rectangle in Java</a>
+<a href="https://www.sanfoundry.com/java-program-print-concentric-circles/">Print Concentric Circles in Java</a>
+<a href="https://www.sanfoundry.com/java-program-draw-smiling-face-using-methods-graphics-class/">Draw a Smiley Face using Graphics in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-several-dots-screen-continuously/">Display Several Dots on Screen Continuously in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-color-dialog-box-change-background-color-frame/">JColorChooser Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-string-background-color-cyan-frame/">Change Frame Background Color as Cyan in Java</a>
+<a href="https://www.sanfoundry.com/java-program-fonts-available-local-system/">Program to know which Fonts are Available in System in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-message-new-frame/">Display Message in New Frame in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-text-different-fonts/">Display Text in Different Fonts in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-text-frame-using-drawstring-inheriting-jpanel-class/">Display Text in Frame using DrawString & Inherit JPanel Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-display-some-text-frame-help-label/">Display Text in Frame using Labels in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-labels-text-fields-entering-name-secured-password/">Create Text Area & Password Field in Java</a>
+<a href="https://www.sanfoundry.com/java-program-get-set-state-get-label-check-box/">getState(), setState() & getLabel() in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-frames-switch-frames-using-buttons/">Create & Switch b/w Frames using Buttons in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-button-display-image-frame/">Displaying Image on Clicking JButton in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-radio-buttons-display-selected-button-label/">Create 2 Radio Buttons & Display Selected Button Label in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-push-buttons-draw-different-borders-buttons/">Create & Set Border to Push Buttons in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-toolbar-3-push-buttons-image-display-selected-button-label/">Create Toolbar with 3 Image Push Buttons in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-split-pane-parts-display-button-display-text-inside-text-area-button-clicked/">Create Split Pane with Two Parts in Java</a>
+<a href="https://www.sanfoundry.com/java-program-progress-bar-5-units-every-click-push-button/">Progress a Progress Bar by 5 Units on Click in Java</a>
+<a href="https://www.sanfoundry.com/java-program-show-functioning-toggle-button/">Toggle Button in Java</a>
+<a href="https://www.sanfoundry.com/java-program-change-background-colour-applet-clicking-control-button/">Change Applet Background Colour when Button Clicked in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-group-buttons-arrange-container-using-flow-layout-manager/">Create Buttons & Arrange in Container using Flow Layout Manager in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-check-boxes-radio-buttons-display-selected-text-area/">Create Check Boxes & Radio Buttons in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-list-box-select-multiple-items-display-frame/">Create List Box in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-combo-box-select-one-option-display-label-option-selected/">Create Combo Box in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-vertical-scrollbar-scroll-button-length-30px/">Java AWT Scrollbar</a>
+<a href="https://www.sanfoundry.com/java-program-create-menu-with-several-menu-items/">Create Menu & Menu Bar in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-choice-menu-select-item-display-frame/">AWT Choice Class in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-menu-handle-file-open-event-user/">Create Menu & Handle File Open Event in Java</a>
+<a href="https://www.sanfoundry.com/java-program-perform-menu-driven-arithmetic-operations-using-switch-case/">Arithmetic Operations using Switch Case in Java</a>
+<a href="https://www.sanfoundry.com/java-program-changes-look-feel-component/">Program to Change Component Look & Feel in Java</a>
+<a href="https://www.sanfoundry.com/java-program-create-jtree-root-node-other-nodes-spanning-root-node/">JTree Program in Java</a>
+</div>
+<span class="collapseomatic " id="id666d8dd9efb09"  tabindex="" title="Java Resources"    >Java Resources</span><div id="target-id666d8dd9efb09" class="collapseomatic_content ">
+<a href="https://www.sanfoundry.com/java-questions-answers-freshers-experienced/">1000 Java MCQ</a>
+<a href="https://www.sanfoundry.com/java-interview-questions/">Java Interview Questions</a>
+<a href="https://test.sanfoundry.com/java-programming-tests/">Java Programming Tests</a>
+<a href="https://test.sanfoundry.com/java-programming-certification-test/">Java Certification Test</a>
+<a href="https://www.sanfoundry.com/java-programming-internship/">Java Internship</a>
+<a href="https://www.sanfoundry.com/best-reference-books-programming-language-java/">Best Java Books</a>
+<a href="https://www.sanfoundry.com/java-android-programing-examples/">100+ Android Java Programs</a>
+</div>
+</div>
+<div style="margin: 50px 0px"> </div></div></aside>			</div><!-- .inside-navigation -->
+		</nav><!-- #site-navigation -->
+
+					<div class="slideout-overlay">
+									<button class="slideout-exit has-svg-icon">
+						<span class="gp-icon pro-close">
+				<svg viewBox="0 0 512 512" aria-hidden="true" role="img" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="1em" height="1em">
+					<path d="M71.029 71.029c9.373-9.372 24.569-9.372 33.942 0L256 222.059l151.029-151.03c9.373-9.372 24.569-9.372 33.942 0 9.372 9.373 9.372 24.569 0 33.942L289.941 256l151.03 151.029c9.372 9.373 9.372 24.569 0 33.942-9.373 9.372-24.569 9.372-33.942 0L256 289.941l-151.029 151.03c-9.373 9.372-24.569 9.372-33.942 0-9.372-9.373-9.372-24.569 0-33.942L222.059 256 71.029 104.971c-9.372-9.373-9.372-24.569 0-33.942z" />
+				</svg>
+			</span>						<span class="screen-reader-text">Close</span>
+					</button>
+							</div>
+		<script type='text/javascript'>
+var colomatduration = 'fast';
+var colomatslideEffect = 'slideFade';
+var colomatpauseInit = '';
+var colomattouchstart = '';
+</script>
+<div class="bottomStickyContainer">
+<div class="sticky-ad-footer-lside">&nbsp;</div>
+
+<div class="sticky-ad-footer">
+<div id="13530630-5320-477a-9c06-ec8117c7221a" class="_ap_apex_ad" style="background: transparent; position:relative; z-index: 2000; width: 728px; height: 90px; overflow:hidden;">
+          <script>
+          var adpushup = window.adpushup  = window.adpushup || {que:[]};
+          adpushup.que.push(function() {
+              adpushup.triggerAd("13530630-5320-477a-9c06-ec8117c7221a");
+          });
+          </script>
+</div>
+</div>
+
+<div style="clear:left;"></div>
+</div>
+
+  <noscript><style>.lazyload{display:none;}</style></noscript><script data-noptimize="1">window.lazySizesConfig=window.lazySizesConfig||{};window.lazySizesConfig.loadMode=1;</script><script async data-noptimize="1" src='https://www.sanfoundry.com/wp-content/plugins/autoptimize/classes/external/js/lazysizes.min.js?ao_version=2.6.2'></script>
+
+
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var offSide = {"side":"left"};
+/* ]]> */
+</script>
+
+
+<!--[if lte IE 11]>
+<script type='text/javascript' src='https://www.sanfoundry.com/wp-content/themes/generatepress/js/classList.min.js'></script>
+<![endif]-->
+
+
+
+
+<script type='text/javascript'>
+/* <![CDATA[ */
+var q2w3_sidebar_options = [{"sidebar":"sidebar-1","margin_top":10,"margin_bottom":10,"stop_id":"footer-widgets","screen_max_width":0,"screen_max_height":0,"width_inherit":false,"refresh_interval":1500,"window_load_hook":false,"disable_mo_api":false,"widgets":["text-296"]},{"sidebar":"sidebar-2","margin_top":10,"margin_bottom":10,"stop_id":"footer-widgets","screen_max_width":0,"screen_max_height":0,"width_inherit":false,"refresh_interval":1500,"window_load_hook":false,"disable_mo_api":false,"widgets":["text-292"]}];
+/* ]]> */
+</script>
+
+
+
+<script defer src="https://www.sanfoundry.com/wp-content/cache/autoptimize/js/autoptimize_7d338bfc6645d4b6df665796389b2c04.js"></script></body>
+</html>
+
+<!-- Dynamic page generated in 2.631 seconds. -->
+<!-- Cached page generated by WP-Super-Cache on 2024-06-15 18:19:29 -->
+
+<!-- Compression = gzip -->
