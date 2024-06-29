@@ -1,4 +1,3 @@
-# SMART-EXAM-PORTAL
 # Exam Portal In Django
 
 
@@ -79,8 +78,5 @@ python manage.py runserver
 ##
 ##
 #### Backend part of the site was developed by:
-https://github.com/devshah207
-https://github.com/Kushalsheth7
+
 #### Frontend part of the site was developed by:
-https://github.com/Aayush1879
-https://github.com/Bhishma4140
